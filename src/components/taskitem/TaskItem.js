@@ -71,7 +71,7 @@ const TaskItem = ({itemObject,projectid}) => {
                         <br/>
                         creadred in : {DateTransform(item.task_date)}
                         <br/>
-                        final date to complete : {DateTransform(item.task_final_date)}
+                        final date  : {DateTransform(item.task_final_date)}
                         <br/>
                         {item.task_description}
                         <br/>
