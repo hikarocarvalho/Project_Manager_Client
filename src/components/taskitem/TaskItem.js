@@ -69,7 +69,9 @@ const TaskItem = ({itemObject,projectid}) => {
                     <header value={item._id}>
                         {item.task_name}
                         <br/>
-                        {DateTransform(item.task_final_date)}
+                        creadred in : {DateTransform(item.task_date)}
+                        <br/>
+                        final date to complete : {DateTransform(item.task_final_date)}
                         <br/>
                         {item.task_description}
                         <br/>
