@@ -1,0 +1,13 @@
+.boxcomponents{
+    
+    margin: 0;
+    margin-top: 50px;
+    width: 90%;
+    margin-left: 5%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

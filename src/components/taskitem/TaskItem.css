@@ -1,0 +1,92 @@
+.item,.edittask{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background-color: #415d58;
+    color:#d1b48c;
+    font-weight: bolder;
+    height: 60px;
+    margin-bottom: 2px;
+}
+.trash{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #d1b48c;
+    background-image: url("./trash.png");
+    background-size: 100% 100%;
+    border: none;
+}
+.red,.yellow,.green{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 10px;
+}
+.priority{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: lime;
+}
+.modal{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+    left: 25%;
+    top:20%;
+    background-color:#d1b48c;
+    color:#415d58;
+    border-radius: 20px;
+    box-shadow: 0px 0 5px 1px black;
+}
+.modal a{
+    margin-bottom: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+.modal header{
+    margin-top: 20px;
+    z-index: 5;
+}
+.confirm,.cancel{
+    width: 90%;
+    height: 40px;
+    color: #415d58;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border:none;
+}
+.cancel{
+    background-color: rgb(226, 93, 93);
+    margin-bottom: 10px;
+}
+.confirm{
+    background-color: #66cf4b;
+    
+}
+.edittask{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border:none;
+}

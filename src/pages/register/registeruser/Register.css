@@ -1,0 +1,31 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    color: #d1b48c;
+    font-size: 20px;
+}
+.button{
+    background-color: #d1b48c;
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    color: #415d58;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+.register-form{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color:#d1b48c;
+}

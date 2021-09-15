@@ -1,0 +1,13 @@
+.input{
+    background-color: transparent;
+    border:none;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d1b48c;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 90%;
+    color:#d1b48c;
+    outline: 0;
+    text-align: center;
+    background-color: #415d58;
+}

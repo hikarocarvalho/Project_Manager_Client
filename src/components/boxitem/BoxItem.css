@@ -1,0 +1,31 @@
+.boxitem,.title,.description,.boxitem-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boxitem{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.title, .description{
+    margin: 5%;
+}
+.boxitem-link{
+    text-decoration: none;
+    background-color: #d1b48c;
+    margin: 2%;
+    width: 21%;
+    min-height: 200px;
+    border-radius: 20px;
+    border:none;
+    color: #415d58;
+    font-weight: bolder;
+    box-shadow: 0px 0 5px 1px black;
+}
+hr{
+    width: 100%;
+    border: 1px solid black;
+}
