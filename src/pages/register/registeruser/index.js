@@ -4,6 +4,7 @@ import Button from "../../../components/button/Button";
 import Inputs from "../../../components/inputs/Inputs";
 import {UserApi} from "../../../api/api_user";
 import { Link } from "react-router-dom";
+import Alert from 'react-bootstrap/Alert';
 function Register(){
     const addUser = async (event)=>{
         event.preventDefault();
