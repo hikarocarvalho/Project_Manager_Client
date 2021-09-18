@@ -8,8 +8,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import DateTransform from "./../../tools/DateTransform";
 import { useHistory } from "react-router-dom";
-import Modal from "./../../components/modal/Modal"
-
+import Modal from "./../../components/modal/Modal";
 function Projects(){
     const history = useHistory();
     const [projects,setprojects] = useState([]);
@@ -18,10 +17,7 @@ function Projects(){
     useEffect(()=>{
         getproject();
     },[])
-    useEffect(()=>{
-        setOpen(false);
-    },[])
-    const remove = ()=>{
+     const remove = ()=>{
         setOpen(true);
     };
     const exclude = async(id)=>{
@@ -78,7 +74,14 @@ function Projects(){
                         </div>
                         
                     </Link>
-                     <button className="trash" onClick={remove(project._id)}></button>
+                     <button className="trash" onClick={remove()}  ></button>
+                     {open?
+                        <Modal>
+                            <header>Do you really want to exclude this?</header>
+                            <a href="#" onClick={exclude(project._id)} className="confirm">Yes</a>
+                            <a href="#" onClick={cancel} className="cancel">No</a>
+                        </Modal>
+                    :null}
                      </BoxItem>
                 ))}
                 <Link to={"/projects/registerproject/"+userid} className="boxitem-link">
@@ -88,15 +91,9 @@ function Projects(){
                     </div>
                 </BoxItem>
                 </Link>
+                
             
             </BoxComponents>
-            {open?
-                <Modal>
-                    <header>Do you really want to exclude this?</header>
-                    <a href="#" onClick={exclude} className="confirm">Yes</a>
-                    <a href="#" onClick={cancel} className="cancel">No</a>
-                </Modal>
-            :null}
         </div>
         
     );
