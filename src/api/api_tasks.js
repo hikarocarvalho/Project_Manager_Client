@@ -1,6 +1,6 @@
 
 export const TasksApi = {
-    url: 'http://localhost:3001/tasks',
+    url: 'https://projectmanagerr.herokuapp.com/tasks',
     fetchGet: (id) =>  (fetch(TasksApi.url+'/projectid/'+id)),
     fetchGetById: (id) => (fetch(TasksApi.url + '/' + id)),
     fetchPost: (body) => {

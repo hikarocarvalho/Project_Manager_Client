@@ -1,6 +1,6 @@
 
 export const PriorityApi = {
-    url: 'http://localhost:3001/priority',
+    url: 'https://projectmanagerr.herokuapp.com/priority',
     fetchGet: () =>  fetch(PriorityApi.url),
     fetchGetById: (id) => fetch(PriorityApi.url + '/' + id),
     fetchPost: (body) => {
