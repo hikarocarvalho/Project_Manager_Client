@@ -8,14 +8,33 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import DateTransform from "./../../tools/DateTransform";
 import { useHistory } from "react-router-dom";
+import Modal from "./../../components/modal/Modal"
 
 function Projects(){
     const history = useHistory();
     const [projects,setprojects] = useState([]);
+    const [open,setOpen] = useState(false);
     
     useEffect(()=>{
         getproject();
     },[])
+    useEffect(()=>{
+        setOpen(false);
+    },[])
+    const remove = ()=>{
+        setOpen(true);
+    };
+    const exclude = async(id)=>{
+        const response = await ProjectApi.fetchDelete(id);
+        const data = await response;
+        console.log(data[0])
+        setOpen(false);
+        window.location.reload();
+    };
+    const cancel = ()=>{
+        console.log(cancel);
+        setOpen(false);
+    };
     const userid= useParams().userid;
 
     const getproject = async ()=>{
@@ -59,7 +78,7 @@ function Projects(){
                         </div>
                         
                     </Link>
-                     <button className="trash" onClick={remove}></button>
+                     <button className="trash" onClick={remove(project._id)}></button>
                      </BoxItem>
                 ))}
                 <Link to={"/projects/registerproject/"+userid} className="boxitem-link">
@@ -71,6 +90,13 @@ function Projects(){
                 </Link>
             
             </BoxComponents>
+            {open?
+                <Modal>
+                    <header>Do you really want to exclude this?</header>
+                    <a href="#" onClick={exclude} className="confirm">Yes</a>
+                    <a href="#" onClick={cancel} className="cancel">No</a>
+                </Modal>
+            :null}
         </div>
         
     );
