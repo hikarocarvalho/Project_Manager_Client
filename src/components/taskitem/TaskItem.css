@@ -90,3 +90,8 @@
     height: 100%;
     border:none;
 }
+.trash{
+    background-color:#415d58;
+    border-radius: 50%;
+    cursor: pointer;
+}
