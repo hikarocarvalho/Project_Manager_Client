@@ -1,6 +1,6 @@
 
 export const ProjectApi = {
-    url: 'https://projectmanagerr.herokuapp.com/projects',
+    url: 'http://localhost:3001/projects',
     fetchByUser: (userid) => (fetch(ProjectApi.url+'/byuser/'+userid)),
     fetchGet: () =>  (fetch(ProjectApi.url)),
     fetchGetById: (id) => (fetch(ProjectApi.url + '/' + id)),

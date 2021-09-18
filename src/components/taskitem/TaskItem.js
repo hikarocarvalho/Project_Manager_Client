@@ -4,7 +4,6 @@ import { TasksApi } from "../../api/api_tasks";
 import DateTransform from "../../tools/DateTransform";
 import Modal from "./../modal/Modal";
 import EditForm from "../editform/EditForm";
-import Button from "./../button/Button";
 const TaskItem = ({itemObject,projectid}) => {
     const [item,setItem] = useState(itemObject);
     const [open,setOpen] = useState(false);

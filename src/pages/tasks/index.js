@@ -32,7 +32,7 @@ function Tasks(){
         console.log(data);
         setTasks(data);
     }  
-    
+   
      /*
         section for the three types of tasks (to-do, doing and done)
         and all tasks one by one of types

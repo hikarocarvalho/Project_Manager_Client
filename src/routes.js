@@ -11,7 +11,6 @@ import Projects from "./pages/projects";
 import NotFound from "./pages/notfound";
 import RegisterProject from "./pages/register/registerproject";
 import RegisterTask from "./pages/register/registertask/RegisterTask";
-import UpdateTask from "./pages/update/UpdateTask";
 
 export default function Routes(){
     return(

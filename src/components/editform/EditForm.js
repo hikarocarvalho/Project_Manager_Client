@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./EditForm.css";
 import Inputs from "./../inputs/Inputs";
-import Button from "./../button/Button";
-import { TasksApi } from "../../api/api_tasks";
 
 const EditForm = ({title,description,id,date,priority,state}) => {
    

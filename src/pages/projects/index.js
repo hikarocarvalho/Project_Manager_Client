@@ -5,12 +5,12 @@ import BoxComponents from "./../../components/boxcomponents/BoxComponents";
 import BoxItem from "../../components/boxitem/BoxItem";
 import { ProjectApi } from "../../api/api_projects";
 import { useParams } from "react-router";
-
 import { Link } from "react-router-dom";
 import DateTransform from "./../../tools/DateTransform";
-
+import { useHistory } from "react-router-dom";
 
 function Projects(){
+    const history = useHistory();
     const [projects,setprojects] = useState([]);
     
     useEffect(()=>{
@@ -25,13 +25,15 @@ function Projects(){
         const data = await response.json();
         setprojects(data);
     }
+    
     return(
         <div className="page">
             <MenuBar id="menutitle" title="Projects"/>
             <BoxComponents>
                 {projects.map((project,index)=>(
+                    <BoxItem key={project._id} className="boxitem" >
                     <Link to={`/tasks/${project._id}/${userid}`} className="boxitem-link">
-                        <BoxItem key={project._id} className="boxitem" >
+                        
                         <header className="titleproject">
                            
                             {project.project_title}
@@ -55,8 +57,10 @@ function Projects(){
                                   
                                 {DateTransform(project.project_final_date)}
                         </div>
-                        </BoxItem>
+                        
                     </Link>
+                     <button className="trash" onClick={remove}></button>
+                     </BoxItem>
                 ))}
                 <Link to={"/projects/registerproject/"+userid} className="boxitem-link">
                 <BoxItem className="boxitem" >

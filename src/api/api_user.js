@@ -1,6 +1,6 @@
 
 export const UserApi = {
-    url: 'https://projectmanagerr.herokuapp.com/users',
+    url: 'http://localhost:3001/users',
     fetchGetLogin: (values) => (fetch(UserApi.url +"/verify/"+ values)),
     fetchGet: () =>  (fetch(UserApi.url)),
     fetchGetById: (id) => (fetch(UserApi.url + '/' + id)),
